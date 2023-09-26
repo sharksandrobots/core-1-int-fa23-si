@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&family=Bitter&family=Work+Sans&display=swap');
 
+/* CSS Custom properties */
+
 :root {
   /* Define Colors as colors */
   --green: #00ebc7;
@@ -67,6 +69,10 @@
 
 }
 
+/* End CSS Custom properties */
+
+/* Layout and structure */
+
 html {
   font-size: var(--baseFontSize);
   box-sizing: border-box;
@@ -86,6 +92,13 @@ body {
   color: var(--textColor);
 }
 
+.section-test {
+  width:700px;
+  display:grid;
+  grid-template-columns: minmax(20px, auto) 1fr 1fr;
+  gap:1em;
+}
+
 main {
   max-width: 80vw;
   margin: 0 auto;
@@ -97,32 +110,6 @@ main {
   grid-gap: var(--grid-gap); 
   grid-template-columns: var(--grid-columns);
   grid-template-rows: auto;
-}
-
-img {
-  width:100%;
-  height: auto;
-}
-
-.intro-text {
-  grid-column: 1 / 3;
-  grid-row:1;
-}
-
-.intro-image {
-  grid-column: 3 / 5;
-  grid-row:1;
-}
-
-.gallery {
-  grid-column: 1 / 5;
-  grid-row:2;
-}
-
-.student-name {
-  font-size:1em;
-  text-transform: uppercase;
-  color: var(--red);
 }
 
 header {
@@ -140,14 +127,12 @@ header nav {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background: var(--red);
   width: 600px;
 }
 
 header nav a {
   color: white;
   text-decoration: none;
-  background: var(--green);
   padding:.5rem;
 
 }
@@ -171,6 +156,15 @@ footer a {
 footer p {
   margin-bottom: 0;
   max-width: none;
+}
+
+/* End Layout and structure */
+
+/* Elements */
+
+img {
+  width:100%;
+  height: auto;
 }
 
 p {
@@ -222,13 +216,6 @@ h4 {
 h5 {
   font-size: var(--h5);
 }
-
-small,
-.text_small {
-  font-size: var(--smallText);
-}
-
-/* End typescale */
 
 blockquote {
   margin: 10px;
@@ -297,6 +284,42 @@ button.small {
 }
 
 
+/* End Elements */
+
+/* Grid items */
+
+.intro-text {
+  grid-column: 1 / 3;
+  grid-row:1;
+}
+
+.intro-image {
+  grid-column: 3 / 5;
+  grid-row:1;
+}
+
+.gallery {
+  grid-column: 1 / 5;
+  grid-row:2;
+}
+
+/* End Grid items */
+
+/* Special classes */
+
+
+.student-name {
+  font-size:1em;
+  text-transform: uppercase;
+  color: var(--red);
+}
+
+
+small,
+.text_small {
+  font-size: var(--smallText);
+}
+
 
 .flex {
   --justifyContent: space-between;
@@ -323,6 +346,12 @@ button.small {
 .card > *:last-child {
   margin-bottom: 0;
 }
+
+
+/* End Special classes */
+
+
+/* Themes */
 
 .dark {
   --cardBg: var(--darkGrey);
