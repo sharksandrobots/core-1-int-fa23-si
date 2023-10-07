@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <style>
+
+        body {
+            background:orange;
+            padding:2rem;
+        }
+        /* this is the code responsive story */
+
+        h1 {
+            font-family: 'Merriweather', serif;
+            font-size:3rem;
+        }
+
+h1.story:before {
+  content: " If I can stop one heart from breaking, I shall not live in vain;";
+}
+
+@media screen and (min-width: 600px) {
+  h1.story:before {
+    content: "If I can ease one life the aching,";
+  }
+  body {
+            background:rgb(34, 177, 21);
+        }
+}
+@media screen and (min-width: 800px) {
+  h1.story:before {
+    content: "Or cool one pain,";
+  }
+  body {
+            background:rgb(242, 67, 175);
+        }
+}
+@media screen and (min-width: 1000px) {
+  h1.story:before {
+    content: "Or help one fainting robin";
+  }
+  body {
+            background:rgb(220, 246, 106);
+        }
+}
+@media screen and (min-width: 1200px) {
+  h1.story:before {
+    content: "Unto his nest again,";
+  }
+  body {
+            background:rgb(114, 212, 244);
+        }
+}
+@media screen and (min-width: 1400px) {
+  h1.story:before {
+    content: "I shall not live in vain. ";
+  }
+  body {
+            background:rgb(156, 113, 169);
+        }
+}
+    </style>
+    <title>Responsive poem</title>
+</head>
+<body>
+    <main>
+        <article><section><h1 class="story"></h1></section></article>
+      </main>
+</body>
+</html>
